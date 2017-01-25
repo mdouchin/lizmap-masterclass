@@ -1,0 +1,1908 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Made with Remarkable!
+  </title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <style type="text/css">
+   ::selection,a::selection{background:rgba(255,255,0,.3)}a,a::selection{color:#0645ad}hr,img{border:0}a,ins{text-decoration:none}::selection,ins,mark{color:#000}dfn,mark{font-style:italic}hr,ol,p,ul{margin:1em 0}table tr td,table tr th{border:1px solid #ccc;text-align:left;padding:6px 13px;margin:0}hr,pre code,table,table tr{padding:0}pre,pre code{white-space:pre}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{color:#444;font-family:Georgia,Palatino,"Palatino Linotype",Times,"Times New Roman",serif;font-size:12px;line-height:1.5em;padding:1em;margin:auto;max-width:42em;background:#fefefe}a:visited{color:#0b0080}a:hover{color:#06e}a:active{color:#faa700}a:focus{outline:dotted thin}a:active,a:hover{outline:0}::-moz-selection{background:rgba(255,255,0,.3);color:#000}a::-moz-selection{background:rgba(255,255,0,.3);color:#0645ad}img{max-width:100%;-ms-interpolation-mode:bicubic;vertical-align:middle}h1,h2,h3,h4,h5,h6{font-weight:400;color:#111;line-height:1em}b,h4,h5,h6,mark,strong,table tr th{font-weight:700}h1{font-size:2.5em}h2{font-size:2em}h3{font-size:1.5em}h4{font-size:1.2em}h5{font-size:1em}h6{font-size:.9em}blockquote{color:#666;margin:0;padding-left:3em;border-left:.5em #EEE solid}hr{display:block;height:2px;border-top:1px solid #aaa;border-bottom:1px solid #eee}code,kbd,pre,samp{color:#000;font-family:monospace,monospace;font-size:.98em}pre{white-space:pre-wrap;word-wrap:break-word}ins{background:#ff9}mark{background:#ff0}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}ol,ul{padding:0 0 0 2em}li p:last-child{margin:0}dd{margin:0 0 0 2em}table{border-collapse:collapse;border-spacing:0}td{vertical-align:top}@media only screen and (min-width:480px){body{font-size:14px}}@media only screen and (min-width:768px){body{font-size:16px}}@media print{blockquote,img,pre,tr{page-break-inside:avoid}*{background:0 0!important;color:#000!important;filter:none!important;-ms-filter:none!important}body{font-size:12pt;max-width:100%}a,a:visited{text-decoration:underline}hr{height:1px;border:0;border-bottom:1px solid #000}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}blockquote,pre{border:1px solid #999;padding-right:1em}img{max-width:100%!important}@page :left{margin:15mm 20mm 15mm 10mm}@page :right{margin:15mm 10mm 15mm 20mm}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}}table tr{border-top:1px solid #ccc;background-color:#fff;margin:0}table tr:nth-child(2n){background-color:#aaa}table tr td :first-child,table tr th :first-child{margin-top:0}table tr td:last-child,table tr th :last-child{margin-bottom:0}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px}pre code{margin:0;border:none;background:0 0}.highlight pre,pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}
+  </style>
+ </head>
+ <body>
+  <h1 id="masterclass-decryptageo-2017-lizmap-publier-vos-cartes-qgis-sur-internet">
+   MasterClass DecryptaGeo 2017 - Lizmap : publier vos cartes QGIS sur Internet
+  </h1>
+  <p>
+   Date: 2017-01-25
+   <br/>
+   Auteur: Michaël Douchin
+   <br/>
+   Contact:
+   <a href="mailto:info@3liz.com">
+    info@3liz.com
+   </a>
+   <br/>
+   Organisation: 3Liz
+   <br/>
+   Site internet:
+   <a href="http://3liz.com">
+    http://3liz.com
+   </a>
+  </p>
+  <p>
+   <img src="media/Logo_car_coul.png" width="200"/>
+  </p>
+  <h2 id="lizmap">
+   Lizmap ?
+  </h2>
+  <ul>
+   <li>
+    Un Web SIG libre pour des projets QGIS
+   </li>
+   <li>
+    Créé par 3liz en 2011
+   </li>
+   <li>
+    Un plugin QGIS et un client Web
+   </li>
+   <li>
+    QGIS Serveur comme serveur cartographique
+   </li>
+   <li>
+    Nouvelle version majeure 3.0 fin mai 2016
+   </li>
+   <li>
+    Version 3.1 pour fin janvier 2017
+   </li>
+  </ul>
+  <p>
+   <img src="media/Lizmap_rond_coul_noir_300.png" width="200"/>
+  </p>
+  <h2 id="qgis-server">
+   QGIS Server ?
+  </h2>
+  <p>
+   Un serveur cartographique basé sur QGIS
+  </p>
+  <ul>
+   <li>
+    rendu de cartes au format image - WMS
+   </li>
+   <li>
+    export de données vectorielles en GML et GeoJSON - WFS
+   </li>
+   <li>
+    export de raster - WCS
+   </li>
+   <li>
+    serveur de traitements - WPS ( plugin )
+   </li>
+  </ul>
+  <p>
+   <img alt="Logo QGIS" src="media/QGis_Logo.png"/>
+  </p>
+  <h2 id="pourquoi-qgis-server">
+   Pourquoi QGIS Server ?
+  </h2>
+  <ul>
+   <li>
+    Pas de configuration -&gt; le projet QGIS :
+   </li>
+   <li>
+    symbologie, étiquettes, échelles, couches
+   </li>
+   <li>
+    Support des formats de QGIS:
+   </li>
+   <li>
+    vecteur, raster, couches virtuelles
+   </li>
+   <li>
+    Les fonctionnalités de QGIS:
+   </li>
+   <li>
+    rendu 2.5D, cartes de chaleur, composeurs d’impression, règles d’étiquetage, expressions, formulaires
+   </li>
+  </ul>
+  <p>
+   <img alt="Rendu QGIS" src="media/bati_amiens.jpeg"/>
+  </p>
+  <h2 id="comment-publier-avec-qgis-server">
+   Comment publier avec QGIS Server ?
+  </h2>
+  <ul>
+   <li>
+    On envoie sur le serveur le projet QGIS et les données liées (ou PostgreSQL )
+   </li>
+   <li>
+    On utilise un client WMS comme QGIS pour visualiser les données
+   </li>
+  </ul>
+  <p>
+   <img alt="QGIS Server" src="media/qgis_server.jpg"/>
+  </p>
+  <h2 id="quapporte-lizmap">
+   Qu’apporte Lizmap ?
+  </h2>
+  <ul>
+   <li>
+    Il liste tous les projets publiés sur le serveur
+   </li>
+   <li>
+    Il affiche les cartes web pour chaque projet
+   </li>
+   <li>
+    Il fait l’intermédiaire entre la carte web et QGIS Server
+   </li>
+   <li>
+    Il contrôle les accès aux cartes (gestion des droits)
+   </li>
+  </ul>
+  <h2 id="comment-publier-avec-lizmap">
+   Comment publier avec Lizmap ?
+  </h2>
+  <ul>
+   <li>
+    On configure le projet
+    <strong>
+     QGIS
+    </strong>
+    : propriétés du projet, projection, couches
+   </li>
+   <li>
+    On configure la carte via le
+    <strong>
+     plugin Lizmap
+    </strong>
+    : échelles, fonds, outils
+   </li>
+   <li>
+    On envoie le projet &amp; la configuration sur le serveur
+   </li>
+   <li>
+    On visualise sur l’interface de
+    <strong>
+     Lizmap Web Client
+    </strong>
+   </li>
+  </ul>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      bureau
+     </th>
+     <th>
+      serveur
+     </th>
+     <th>
+      browser
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      <img alt="1" src="media/lizmap-1.jpg"/>
+     </td>
+     <td>
+      <img alt="2" src="media/lizmap-2.jpg"/>
+     </td>
+     <td>
+      <img alt="3" src="media/lizmap-3.jpg"/>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h2 id="la-page-daccueil-des-projets">
+   La page d’accueil des projets
+  </h2>
+  <ul>
+   <li>
+    Les projets sont rangés par répertoire
+   </li>
+   <li>
+    Une vignette par projet QGIS: illustration, titre, résumé
+   </li>
+   <li>
+    Les projets accessibles en fonction des droits
+   </li>
+  </ul>
+  <p>
+   <img alt="Accueil Lizmap" src="media/accueil.gif"/>
+  </p>
+  <h2 id="la-carte-lizmap">
+   La carte Lizmap
+  </h2>
+  <ul>
+   <li>
+    Un bandeau : logo, recherche d’adresse, connexion
+   </li>
+   <li>
+    Une barre de navigation
+   </li>
+   <li>
+    Un panneau de gauche : couches et légende, métadonnées de la carte
+   </li>
+   <li>
+    Une fenêtre à droite pour les outils : impression, localisation
+   </li>
+   <li>
+    Une carte miniature avec l’échelle
+   </li>
+   <li>
+    Une interface HTML “responsive”, adaptée aux différents écrans
+   </li>
+  </ul>
+  <p>
+   <img alt="Carte Lizmap" src="media/interface.jpg"/>
+  </p>
+  <h2 id="lenvironnement-de-travail-pour-la-master-class">
+   L’environnement de travail pour la Master Class
+  </h2>
+  <h3 id="cote-serveur">
+   Côté Serveur
+  </h3>
+  <p>
+   Pour la Master Class, nous avons installé sur chaque machine un serveur cartographique, basé sur Lizmap. Il contient pour la partie serveur
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Serveur Web
+    </strong>
+    : Nginx &amp; php-fpm
+   </li>
+   <li>
+    <strong>
+     Application cartographique Web
+    </strong>
+    : Lizmap Web Client 3.1beta
+   </li>
+   <li>
+    <strong>
+     Serveur cartographique
+    </strong>
+    : QGIS Server 2.14 LTR,
+   </li>
+   <li>
+    <strong>
+     Serveur de Gestion de Bases de données
+    </strong>
+    : PostgreSQL 9.6/ PostGIS 2.3
+   </li>
+   <li>
+    <strong>
+     Serveur FTP
+    </strong>
+    : Pure-ftpd
+   </li>
+   <li>
+    <strong>
+     Serveur de cache
+    </strong>
+    : Redis
+   </li>
+  </ul>
+  <p>
+   <img alt="Serveur cartographique" src="media/architecture_serveur.png"/>
+  </p>
+  <h3 id="cote-bureautique">
+   Côté bureautique
+  </h3>
+  <p>
+   Cette machine est basée sur le système d’exploitation Debian Jessie, et le bureau Xfce. C’est aussi un poste bureautique, qui contient:
+  </p>
+  <ul>
+   <li>
+    Une
+    <strong>
+     barre de lancement rapide
+    </strong>
+    d’applications à gauche
+   </li>
+   <li>
+    <strong>
+     Firefox
+    </strong>
+    : navigateur Web, pour visualiser les cartes Lizmap
+   </li>
+   <li>
+    <strong>
+     QGIS
+    </strong>
+    : SIG bureautique, pour créer les cartes
+   </li>
+   <li>
+    <strong>
+     FileZilla
+    </strong>
+    : client FTP, pour envoyer les fichiers sur le serveur
+   </li>
+   <li>
+    <strong>
+     Terminal
+    </strong>
+    : pour administrer la machine
+   </li>
+   <li>
+    <p>
+     <strong>
+      Explorateur de fichiers
+     </strong>
+     pour gérer les dossiers et fichiers
+    </p>
+   </li>
+   <li>
+    <p>
+     Une
+     <strong>
+      barre d’état
+     </strong>
+     en bas qui contient les applications ouvertes
+    </p>
+   </li>
+   <li>
+    Un menu en bas à gauche pour lancer des applications
+   </li>
+  </ul>
+  <p>
+   <img alt="Bureau masterclass" src="media/bureau_debian.png"/>
+  </p>
+  <h2 id="les-donnees-utilisees-pour-la-master-class">
+   Les données utilisées pour la Master Class
+  </h2>
+  <p>
+   Les données proviennent des portails opendata. Ce sont principalement des fichiers Shapefile. Il sont en projection Lambert 93 (EPSG:2154)
+  </p>
+  <ul>
+   <li>
+    Des données
+    <em>
+     Route 500
+    </em>
+    de l’IGN
+   </li>
+   <li>
+    Des données
+    <em>
+     GéoFLA
+    </em>
+    de l’IGN
+   </li>
+   <li>
+    Nous créerons ensuite des données dans
+    <em>
+     PostgreSQL
+    </em>
+   </li>
+  </ul>
+  <p>
+   Les données sont placées dans le répertoire
+   <strong>
+    /home/adminsig/Lizmap/rep1/layers_idf/
+   </strong>
+  </p>
+  <p>
+   <img alt="Donnees IDF" src="media/donnees_idf.png"/>
+  </p>
+  <h2 id="le-projet-qgis-de-la-master-class">
+   Le projet QGIS de la Master Class
+  </h2>
+  <p>
+   Nous avons préparé un projet QGIS avec ces données, organisées et mises en forme, afin de faciliter la prise en main.
+  </p>
+  <p>
+   Lancez QGIS via l’icône de la barre de gauche, puis ouvrir le projet
+   <strong>
+    master_class_lizmap.qgs
+   </strong>
+   situé dans le répertoire
+   <strong>
+    /home/adminsig/Lizmap/rep1/
+   </strong>
+  </p>
+  <p>
+   <img alt="QGIS projet IDF" src="media/qgis_couches_idf.png"/>
+  </p>
+  <h2 id="installation-du-plugin-lizmap-sous-qgis">
+   Installation du plugin Lizmap sous QGIS
+  </h2>
+  <ul>
+   <li>
+    Vérifier que le plugin n’est pas déjà installé : menu
+    <strong>
+     Internet &gt; Lizmap
+    </strong>
+   </li>
+   <li>
+    <p>
+     Pour l’installer:
+    </p>
+    <ul>
+     <li>
+      Menu
+      <strong>
+       Extension &gt; Installer/Gérer les extensions
+      </strong>
+     </li>
+     <li>
+      Dans l’onglet
+      <strong>
+       Tout
+      </strong>
+      , taper dans
+      <strong>
+       Rechercher
+      </strong>
+      le mot “Lizmap”, puis sélectionner le plugin et cliquer sur le bouton
+      <strong>
+       Installer
+      </strong>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     Le plugin se trouve dans le menu
+     <strong>
+      Internet &gt; Lizmap
+     </strong>
+     et dans la barre d’outil
+     <strong>
+      Internet
+     </strong>
+     (Vue &gt; Barres d’outil &gt; Site Internet)
+    </p>
+   </li>
+  </ul>
+  <h2 id="visualiser-la-carte-lizmap-correspondante-au-projet-qgis">
+   Visualiser la carte Lizmap correspondante au projet QGIS
+  </h2>
+  <p>
+   Lancer le navigateur
+   <strong>
+    Firefox
+   </strong>
+   via la barre de lancement de gauche. Deux onglets sont automatiquement ouverts :
+  </p>
+  <ul>
+   <li>
+    Un onglet
+    <strong>
+     Projets - Lizmap
+    </strong>
+    avec la page d’accueil de l’application Lizmap (serveur local)
+   </li>
+   <li>
+    Un onglet
+    <strong>
+     Lizmap - Documentation
+    </strong>
+    avec la documentation de Lizmap
+   </li>
+  </ul>
+  <p>
+   <img alt="Accueil Lizmap" src="media/lizmap_accueil.png"/>
+  </p>
+  <p>
+   Dans l’onglet Lizmap, vous pouvez cliquer sur le bouton
+   <strong>
+    Voir la carte
+   </strong>
+   pour le répertoire
+   <strong>
+    Master Class
+   </strong>
+   et le projet
+   <strong>
+    Carte de la région Île-de-France
+   </strong>
+  </p>
+  <p>
+   <img alt="Carte Lizmap du masterclass" src="media/lizmap_carte.png"/>
+  </p>
+  <h2 id="modifier-le-projet-qgis">
+   Modifier le projet QGIS
+  </h2>
+  <p>
+   Nous allons modifier quelques propriétés du projet, puis re-publier le projet sur le serveur, pour montrer le fonctionnement de Lizmap.
+  </p>
+  <h3 id="metadonnees-du-projet-qgis">
+   Métadonnées du projet QGIS
+  </h3>
+  <p>
+   <strong>
+    Ouvrir les propriétés du projet
+   </strong>
+   : menu
+   <em>
+    Projet &gt; Propriétés du projet
+   </em>
+   , onglet
+   <strong>
+    Serveur OWS
+   </strong>
+   .
+  </p>
+  <p>
+   Case à cocher
+   <strong>
+    Informations générales du service
+   </strong>
+   et modifier le titre, la description, et d’autres informations utiles (métadonnées du projet QGIS)
+  </p>
+  <p>
+   <img alt="Propriétés du projet QGIS" src="media/qgis_project_properties.png"/>
+  </p>
+  <h3 id="metadonnees-des-couches">
+   Métadonnées des couches
+  </h3>
+  <p>
+   Dans Lizmap, nous utilisons par défaut le titre des couches pour l’affichage (et pas le nom écrit dans la légende QGIS). Pour modifier ces informations:
+  </p>
+  <ul>
+   <li>
+    Ouvrir les
+    <strong>
+     Propriétés
+    </strong>
+    d’une couche vecteur, en double-cliquant sur son nom dans la légende.
+   </li>
+   <li>
+    Onglet
+    <strong>
+     Métadonnées
+    </strong>
+    : vous pouvez par exemple modifier le titre, le résumé de la couche
+   </li>
+  </ul>
+  <p>
+   <img alt="Métadonnées des couches" src="media/layer_metadata.png"/>
+  </p>
+  <h3 id="modifier-la-symbologie-dune-couche">
+   Modifier la symbologie d’une couche
+  </h3>
+  <p>
+   Pour tester, nous pouvons changer la couleur des symboles pour la couche
+   <strong>
+    AERODROME
+   </strong>
+  </p>
+  <ul>
+   <li>
+    Ouvrir les
+    <strong>
+     Propriétés
+    </strong>
+    d’une couche vecteur, en double-cliquant sur son nom dans la légende.
+   </li>
+   <li>
+    Dans l’
+    <strong>
+     onglet Style
+    </strong>
+    , choisir une couleur différente pour l’avion, puis valider et fermer.
+   </li>
+  </ul>
+  <p>
+   <img alt="Style des aérodromes" src="media/style_aerodrome.png"/>
+  </p>
+  <p>
+   Une fois ces informations modifiées, il faut maintenant:
+  </p>
+  <ul>
+   <li>
+    <strong>
+     enregistrer le projet QGIS
+    </strong>
+   </li>
+   <li>
+    <strong>
+     enregistrer la configuration Lizmap
+    </strong>
+    via le plugin, puis
+   </li>
+   <li>
+    <strong>
+     publier le projet et la configuration
+    </strong>
+    sur le serveur
+   </li>
+  </ul>
+  <h2 id="preparer-la-publication-avec-le-plugin-lizmap">
+   Préparer la publication avec le plugin Lizmap
+  </h2>
+  <p>
+   <strong>
+    Ouvrir le plugin Lizmap
+   </strong>
+   : une boite de dialogue apparaît avec 6 onglets.
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Couches
+    </strong>
+    : la configuration détaillée couche par couche (titre, description, lien, cache, format d’image, etc.)
+   </li>
+   <li>
+    <strong>
+     Carte
+    </strong>
+    : choix des outils simples (impression, recherche d’adresse, etc.), des échelles, de l’emprise initiale de la carte,
+   </li>
+   <li>
+    <strong>
+     Fonds
+    </strong>
+    : choix des fonds externes (OpenStreetMap, Géoportail IGN, etc.) et des fonds Lizmap
+   </li>
+   <li>
+    <strong>
+     Outils
+    </strong>
+    : activation ou désactivation des outils avancés (localiser par couche, édition, filtrage, table attributaire)
+   </li>
+   <li>
+    <em>
+     FTP
+    </em>
+    : outil de synchronisation basé sur le FTP.
+    <strong>
+     désactivé
+    </strong>
+   </li>
+   <li>
+    <em>
+     Log
+    </em>
+    : Fenêtre contenant les messages liés à la configuration
+   </li>
+  </ul>
+  <p>
+   <img alt="Interface du plugin Lizmap" src="media/lizmap_plugin_interface.png"/>
+  </p>
+  <p>
+   Pour enregistrer la configuration Lizmap, il suffit d’appuyer sur le bouton
+   <strong>
+    Enregistrer
+   </strong>
+  </p>
+  <ul>
+   <li>
+    Cela enregistre un fichier
+    <strong>
+     .qgs.cfg
+    </strong>
+    au même niveau que le projet QGIS
+   </li>
+  </ul>
+  <p>
+   Une fois ce fichier enregistré, nous devons envoyer sur le serveur
+   <strong>
+    le projet QGIS modifié
+   </strong>
+   , ainsi que
+   <strong>
+    la configuration Lizmap
+   </strong>
+   mise à jour.
+  </p>
+  <p>
+   Pour cela, nous utilisons aujourd’hui le protocole FTP.
+  </p>
+  <h2 id="envoyer-son-projet-et-les-donnees-via-ftp">
+   Envoyer son projet et les données via FTP
+  </h2>
+  <p>
+   Normalement, les fichiers doivent être
+   <strong>
+    poussés sur le serveur distant
+   </strong>
+   . Nous pouvons utiliser le
+   <strong>
+    FTP
+   </strong>
+   (sécurisé via SSL).
+  </p>
+  <p>
+   <em>
+    NB: Dans notre cas, le serveur est notre machine. Nous allons quand même montrer comment transférer les données via FTP.
+   </em>
+  </p>
+  <ul>
+   <li>
+    On utilise un
+    <strong>
+     client FTP
+    </strong>
+    , par exemple
+    <strong>
+     FileZilla
+    </strong>
+    : le lancer via la barre de gauche
+   </li>
+   <li>
+    Ouvrir le
+    <strong>
+     gestionnaire de connexion
+    </strong>
+    via le 1er bouton de la barre d’outils
+   </li>
+   <li>
+    Une connexion
+    <strong>
+     Liz.map
+    </strong>
+    doit normalement être configurée. Le mot de passe est
+    <em>
+     12345678
+    </em>
+    pour l’utilisateur
+    <em>
+     lizmap
+    </em>
+   </li>
+   <li>
+    Se connecter via le
+    <strong>
+     bouton Connexion
+    </strong>
+   </li>
+   <li>
+    Le panneau de gauche liste
+    <strong>
+     les fichiers locaux
+    </strong>
+    du répertoire
+    <strong>
+     /home/adminsig/Lizmap/
+    </strong>
+    : aller sur le répertoire
+    <strong>
+     rep1
+    </strong>
+    dans lequel se trouve votre projet QGIS
+   </li>
+   <li>
+    Le panneau de droite liste
+    <strong>
+     les répertoires du serveur distant
+    </strong>
+    :
+    <em>
+     commun
+    </em>
+    ,
+    <em>
+     rep1
+    </em>
+   </li>
+  </ul>
+  <p>
+   <img alt="Interface FileZilla Connexion" src="media/filezilla_interface.png"/>
+  </p>
+  <p>
+   La navigation est synchronisée entre le panneau de gauche et de droite. Le projet, la configuration ainsi que les fichiers sont présents en local, et sur le serveur.
+  </p>
+  <ul>
+   <li>
+    Envoyer les fichiers du
+    <strong>
+     projet QGIS
+    </strong>
+    (.qgs) et le fichier de
+    <strong>
+     configuration Lizmap
+    </strong>
+    (.qgs.cfg) du répertoire local
+    <strong>
+     rep1/
+    </strong>
+    vers le répertoire distant
+    <strong>
+     rep1
+    </strong>
+   </li>
+  </ul>
+  <p>
+   <img alt="Interface FileZilla Explorateur" src="media/filezilla_interface_2.png"/>
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Vérifier les modifications sur la carte en Ligne
+    </strong>
+    : rafraîchir la page web de la carte Lizmap dans le navigateur.
+   </li>
+  </ul>
+  <p>
+   <strong>
+    –&gt; Vous devez voir les modifications effectuées sur votre projet QGIS
+   </strong>
+   : titre du projet, métadonnées des couches, styles des aéroports.
+  </p>
+  <h2 id="longlet-couches-du-plugin-lizmap">
+   L’onglet Couches du plugin Lizmap
+  </h2>
+  <p>
+   Nous allons voir quelques options de cet onglet
+  </p>
+  <ul>
+   <li>
+    les
+    <strong>
+     métadonnées
+    </strong>
+    : titre, résumé, et lien
+   </li>
+   <li>
+    la
+    <strong>
+     popup
+    </strong>
+    : fenêtre d’information sur les objets
+   </li>
+   <li>
+    <strong>
+     groupe comme une couche
+    </strong>
+   </li>
+  </ul>
+  <h3 id="les-metadonnees">
+   Les métadonnées
+  </h3>
+  <ul>
+   <li>
+    Le plugin reprend les métadonnées renseignées via les propriétés de la couche.
+   </li>
+   <li>
+    On peut éditer le titre et le résumé depuis cette interface.
+   </li>
+   <li>
+    On peut ajouter un lien, de type
+    <strong>
+     URL
+    </strong>
+    (ex:
+    <a href="http://3liz.com">
+     http://3liz.com
+    </a>
+    ) ou
+    <strong>
+     un document
+    </strong>
+    posé dans le répertoire
+    <strong>
+     media/
+    </strong>
+   </li>
+  </ul>
+  <p>
+   <img alt="Onglet Couches" src="media/onglet_couches.png"/>
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Enregistrer le projet QGIS, la configuration Lizmap, et re-publier via FTP pour tester
+    </strong>
+   </li>
+  </ul>
+  <h3 id="les-popups-des-informations-sur-clic-de-la-carte">
+   Les Popups: des informations sur clic de la carte
+  </h3>
+  <p>
+   Une popup est une
+   <strong>
+    fenêtre d’information
+   </strong>
+   qui est affichée à l’utilisateur lorsqu’il clique sur la carte. Elle contient les données attributaires des couches vectorielles pour lesquelles les popups sont activées.
+  </p>
+  <ul>
+   <li>
+    Ouvrir le plugin Lizmap,
+    <strong>
+     onglet Couches
+    </strong>
+   </li>
+   <li>
+    <p>
+     Pour les couches suivantes, cocher la case
+     <strong>
+      Activer les popups
+     </strong>
+    </p>
+    <ul>
+     <li>
+      <strong>
+       Aérodromes
+      </strong>
+     </li>
+     <li>
+      <strong>
+       Gares
+      </strong>
+     </li>
+     <li>
+      <strong>
+       Communes
+      </strong>
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <strong>
+      Enregistrer et publier pour tester
+     </strong>
+    </p>
+   </li>
+  </ul>
+  <p>
+   <img alt="Popup aérodrome" src="media/popup_aerodrome.png"/>
+  </p>
+  <p>
+   Il est possible:
+  </p>
+  <ul>
+   <li>
+    <strong>
+     de limiter les colonnes affichées
+    </strong>
+    dans la popup via la
+    <strong>
+     colonne WMS du tableau de l’onglet Champs
+    </strong>
+    des propriétés de chaque couche vectorielle
+   </li>
+   <li>
+    <strong>
+     d’utiliser des alias
+    </strong>
+    à la place du nom des champs pour l’affichage :
+    <strong>
+     colonne Alias du tableau des champs
+    </strong>
+   </li>
+   <li>
+    <strong>
+     d’afficher des images et des liens
+    </strong>
+    dans les popups: nous le verrons plus tard.
+   </li>
+  </ul>
+  <h2 id="longlet-carte-du-plugin-lizmap">
+   L’onglet Carte du plugin Lizmap
+  </h2>
+  <p>
+   Dans le plugin Lizmap,
+   <strong>
+    onglet Carte
+   </strong>
+   , il est possible d’ajouter les outils suivants via le groupe
+   <strong>
+    Outils de la carte
+   </strong>
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Impression
+    </strong>
+    : il faut avoir au moins un composeur QGIS -&gt; nous le verrons ensuite
+   </li>
+   <li>
+    <strong>
+     Outils de mesure
+    </strong>
+    : ajoute un menu pour mesure une longueur, une aire ou un périmètre
+   </li>
+   <li>
+    <strong>
+     Zoom précédent/suivant
+    </strong>
+    : ajoute 2 boutons pour naviguer entre les emprises déjà visitées
+   </li>
+   <li>
+    <strong>
+     Positionnement automatique
+    </strong>
+    : demande au navigateur la position via api ou GPS et recentre la carte
+   </li>
+   <li>
+    <strong>
+     Recherche d’adresse
+    </strong>
+    : permet de chercher une adresse et de zoomer sur le résultat sélectionné
+   </li>
+  </ul>
+  <p>
+   <img alt="Onglet carte" src="media/onglet_carte.png"/>
+  </p>
+  <h2 id="longlet-outils-du-plugin-lizmap">
+   L’onglet Outils du plugin Lizmap
+  </h2>
+  <p>
+   Cet onglet permet de configurer les outils avancés de Lizmap.
+  </p>
+  <h3 id="zoomer-facilement-sur-une-zone-localiser-par-couche">
+   Zoomer facilement sur une zone : Localiser par couche
+  </h3>
+  <p>
+   On souhaite proposer à l’utilisateur des listes déroulantes où il pourra choisir un lieu sur lequel zoomer. La carte présente déjà un exemple sur les communes.
+  </p>
+  <ul>
+   <li>
+    <p>
+     Tester dans le navigateur la liste des communes :
+    </p>
+   </li>
+   <li>
+    <p>
+     une
+     <strong>
+      liste déroulante apparaît en haut à droite
+     </strong>
+     avec la liste des communes dans l’outil
+     <strong>
+      Localisation
+     </strong>
+     au dessus de la légende.
+    </p>
+   </li>
+   <li>
+    la
+    <strong>
+     sélection d’un item
+    </strong>
+    zoome la carte sur la géométrie correspondante
+   </li>
+   <li>
+    On peut
+    <strong>
+     taper les premières lettres
+    </strong>
+    d’une commune et utiliser l’autocomplétion puis la touche Entrée.
+   </li>
+  </ul>
+  <p>
+   Pour ajouter une couche:
+  </p>
+  <ul>
+   <li>
+    Ouvrir le menu
+    <strong>
+     Projet &gt; Propriétés du projet &gt; Onglet Serveur OWS
+    </strong>
+    .
+   </li>
+   <li>
+    Dans le groupe
+    <strong>
+     Capacités WFS
+    </strong>
+    , cocher
+    <strong>
+     Publier
+    </strong>
+    pour la couche
+    <strong>
+     AERODROME
+    </strong>
+   </li>
+   <li>
+    Ouvrir le plugin Lizmap,
+    <strong>
+     Onglet Outils
+    </strong>
+   </li>
+   <li>
+    Dans le groupe
+    <strong>
+     Localiser par couche
+    </strong>
+    choisir la couche
+    <strong>
+     AERODROME
+    </strong>
+    et l’attribut
+    <strong>
+     TOPONYME
+    </strong>
+    à afficher et cocher
+    <strong>
+     Afficher la géométrie
+    </strong>
+    . Puis bouton
+    <strong>
+     Ajouter la couche
+    </strong>
+   </li>
+  </ul>
+  <h3 id="laffichage-de-tableaux-de-donnees">
+   L’affichage de tableaux de données
+  </h3>
+  <p>
+   Nous souhaitons proposer à l’utilisateur un affichage des données sous la forme de tableaux. Pour cela, il suffit
+  </p>
+  <ul>
+   <li>
+    de publier la/les couches
+    <strong>
+     en WFS
+    </strong>
+    via les propriétés du projet QGIS (onglet Serveur OWS)
+   </li>
+   <li>
+    d’utiliser l’outil
+    <strong>
+     Table attributaire
+    </strong>
+    de l’onglet
+    <strong>
+     Outils
+    </strong>
+    du plugin Lizmap
+   </li>
+   <li>
+    On choisit la couche, l’
+    <strong>
+     identifiant unique
+    </strong>
+    (privilégier les entiers et clés primaires) et on l’ajoute via le bouton.
+   </li>
+  </ul>
+  <p>
+   <img alt="Table attributaire plugin" src="media/table_attributaire_plugin.png"/>
+  </p>
+  <p>
+   On enregistre, et on publie sur le serveur.
+   <br/>
+   L’activation de la table attributaire pour une couche entraîne l’ajout de fonctionnalités:
+  </p>
+  <ul>
+   <li>
+    affichage du
+    <strong>
+     tableau des données
+    </strong>
+   </li>
+   <li>
+    <strong>
+     export
+    </strong>
+    des données vectorielles
+   </li>
+   <li>
+    <strong>
+     sélection
+    </strong>
+    des données
+   </li>
+   <li>
+    <strong>
+     filtre
+    </strong>
+    des données
+   </li>
+  </ul>
+  <p>
+   <img alt="Table attributaire lizmap" src="media/table_attributaire_lizmap.png"/>
+  </p>
+  <h2 id="ledition-de-donnees-dans-lizmap">
+   L’édition de données dans Lizmap
+  </h2>
+  <h3 id="preparer-ledition-de-donnees">
+   Préparer l’édition de données
+  </h3>
+  <p>
+   Nous souhaitons permettre aux utilisateurs de
+   <strong>
+    modifier certaines couches
+   </strong>
+   publiées dans la carte. Pour cela, nous devons utiliser des couches stockées dans une base
+   <strong>
+    PostGreSQL/PostGIS
+   </strong>
+  </p>
+  <ul>
+   <li>
+    Ouvrir QGIS et lancer le
+    <strong>
+     gestionnaire de base de données
+    </strong>
+    : Menu Base de données &gt; Gestionnaire de bases de données
+   </li>
+   <li>
+    Dans l’arbre de gauche, double-cliquer sur
+    <strong>
+     PostGIS &gt; Lizmap &gt; public
+    </strong>
+   </li>
+   <li>
+    Créer un couche via le menu
+    <strong>
+     Table &gt; Créer une table
+    </strong>
+   </li>
+   <li>
+    Donner un
+    <strong>
+     Nom
+    </strong>
+    :
+    <strong>
+     eolienne
+    </strong>
+    -&gt; pas d’accent ou espaces !!!
+   </li>
+   <li>
+    <p>
+     Ajouter les champs suivants:
+    </p>
+    <ul>
+     <li>
+      id / serial
+     </li>
+     <li>
+      nom / text
+     </li>
+     <li>
+      categorie / text
+     </li>
+     <li>
+      hauteur / integer
+     </li>
+     <li>
+      description / text (cocher la case NULL)
+     </li>
+     <li>
+      photo / text (cocher la case NULL)
+     </li>
+    </ul>
+   </li>
+   <li>
+    <p>
+     <strong>
+      Clé primaire
+     </strong>
+     : id
+    </p>
+   </li>
+   <li>
+    Cocher
+    <strong>
+     Créer une colonne géométrique
+    </strong>
+    de type
+    <strong>
+     POINT
+    </strong>
+    / geom / Dimension 2 / SRID
+    <strong>
+     2154
+    </strong>
+   </li>
+   <li>
+    Cocher
+    <strong>
+     Créer un index spatial
+    </strong>
+   </li>
+   <li>
+    Valider avec le bouton
+    <strong>
+     Créer
+    </strong>
+   </li>
+  </ul>
+  <p>
+   <img alt="Table éolienne" src="media/table_eolienne.png"/>
+  </p>
+  <h3 id="configurer-ledition-de-donnees-dans-qgis">
+   Configurer l’édition de données dans QGIS
+  </h3>
+  <ul>
+   <li>
+    On ajoute la couche
+    <strong>
+     eolienne
+    </strong>
+    dans le projet QGIS
+   </li>
+   <li>
+    On ouvre les propriétés de la couche, onglet
+    <strong>
+     Champs
+    </strong>
+   </li>
+   <li>
+    On choisit des types de champs via le bouton
+    <strong>
+     Outil d’édition
+    </strong>
+   </li>
+  </ul>
+  <p>
+   <img alt="Champs éolienne" src="media/champs_eolienne.png"/>
+  </p>
+  <p>
+   On peut tester dans QGIS en ouvrant la table attributaire
+  </p>
+  <ul>
+   <li>
+    Sélectionner la couche dans la légende
+   </li>
+   <li>
+    Menu Vue &gt; Barres d’outils &gt;
+    <strong>
+     Barre d’outils de la numérisation
+    </strong>
+   </li>
+   <li>
+    Cliquer sur le bouton
+    <strong>
+     Crayon
+    </strong>
+    pour basculer en mode édition
+   </li>
+   <li>
+    Dans la barre de numérisation, cliquer sur
+    <strong>
+     Ajouter une entité
+    </strong>
+    ( 3 points )
+   </li>
+   <li>
+    Dans le formulaire, renseigner les différents champs
+   </li>
+   <li>
+    Valider, puis
+    <strong>
+     enregistrer
+    </strong>
+    via la disquette dans la barre de numérisation
+   </li>
+  </ul>
+  <p>
+   <img alt="Formulaire éolienne" src="media/formulaire_eolienne.png"/>
+  </p>
+  <h3 id="configurer-ledition-de-donnees-dans-lizmap">
+   Configurer l’édition de données dans Lizmap
+  </h3>
+  <ul>
+   <li>
+    On ouvre les propriétés du projet QGIS (Menu Projet &gt; Propriété du projet), on
+    <strong>
+     publie en WFS
+    </strong>
+    (case à cocher dans Capacités WFS ) -&gt; Valider
+   </li>
+   <li>
+    On lance le plugin Lizmmap, onglet Outils, groupe
+    <strong>
+     Edition de couches
+    </strong>
+   </li>
+   <li>
+    On choisir la couche eolienne, on coche toutes les cases (Créer, Modifier les attributs, Modifier la géométrie, Supprimer), on ajoute.
+   </li>
+   <li>
+    On enregistre la configuration Lizmap via
+    <strong>
+     Enregistrer
+    </strong>
+    .
+   </li>
+  </ul>
+  <p>
+   <img alt="Edition plugin Lizmap éolienne" src="media/edition_lizmap_eolienne.png"/>
+  </p>
+  <ul>
+   <li>
+    On
+    <strong>
+     publie
+    </strong>
+    le projet QGIS et la configuration via FTP, et on teste dans le navigateur.
+   </li>
+  </ul>
+  <p>
+   <img alt="Edition éolienne dans Lizmap" src="media/edition_eolienne_dans_lizmap.png"/>
+  </p>
+  <h2 id="les-relations-entre-couches">
+   Les relations entre couches
+  </h2>
+  <p>
+   On peut gérer les
+   <strong>
+    relations parent/enfants
+   </strong>
+   entre sources de données dans QGIS, et donc dans Lizmap.
+  </p>
+  <p>
+   Nous allons l’illustrer avec
+   <strong>
+    des travaux sur les éoliennes
+   </strong>
+  </p>
+  <h3 id="creer-une-table-travaux">
+   Créer une table travaux
+  </h3>
+  <ul>
+   <li>
+    Ouvrir le
+    <strong>
+     gestionnaire de bases de données
+    </strong>
+    (menu Bases de données )
+   </li>
+   <li>
+    Se connecter via l’arbre de gauche à
+    <strong>
+     Postgis &gt; Lizmap &gt; public
+    </strong>
+   </li>
+   <li>
+    Menu
+    <strong>
+     Table &gt; Créer une table
+    </strong>
+    -&gt; l’appeler
+    <strong>
+     travaux
+    </strong>
+   </li>
+   <li>
+    <p>
+     Ajouter les
+     <strong>
+      champs
+     </strong>
+     suivants:
+    </p>
+    <ul>
+     <li>
+      id / serial
+     </li>
+     <li>
+      id_eolienne / integer
+     </li>
+     <li>
+      date / date
+     </li>
+     <li>
+      auteur / text
+     </li>
+     <li>
+      description / text
+     </li>
+     <li>
+      <strong>
+       clé primaire
+      </strong>
+      = id
+     </li>
+     <li>
+      <strong>
+       Enregistrer
+      </strong>
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <p>
+   <img alt="Table travaux" src="media/table_travaux.png"/>
+  </p>
+  <ul>
+   <li>
+    Ajouter la couche dans QGIS
+   </li>
+  </ul>
+  <h3 id="configurer-la-relation-eoliennes-travaux">
+   Configurer la relation éoliennes / travaux
+  </h3>
+  <p>
+   On va maintenant déclarer la relation entre les éoliennes et les travaux. Dans les
+   <strong>
+    propriétés du projet
+   </strong>
+   ( CTRL + MAJ +P ), onglet
+   <strong>
+    Relations
+   </strong>
+  </p>
+  <p>
+   Ajouter une nouvelle relations, avec les paramètres suivants:
+  </p>
+  <p>
+   <img alt="Métadonnées des couches" src="media/relation_qgis.png"/>
+  </p>
+  <h3 id="configurer-les-outils-dedition-pour-la-couche-travaux">
+   Configurer les outils d’édition pour la couche travaux
+  </h3>
+  <p>
+   On ouvre les
+   <strong>
+    propriétés de la couche
+   </strong>
+   , et dans l’onglet
+   <strong>
+    Champs
+   </strong>
+   , on choisit l’outil d’édition adapté.
+  </p>
+  <ul>
+   <li>
+    <strong>
+     Calendrier
+    </strong>
+    pour le champ date.
+   </li>
+   <li>
+    <strong>
+     Valeur relationnelle
+    </strong>
+    pour le champ
+    <strong>
+     id_eolienne
+    </strong>
+    -&gt; on va choisir de remplir une liste déroulante avec le nom des éoliennes
+   </li>
+  </ul>
+  <p>
+   <img alt="Valeur relationnelle des travaux" src="media/valeur_relationnelle_travaux.png"/>
+  </p>
+  <p>
+   On teste l’ajout d’un travail dans QGIS avec le formulaire.
+  </p>
+  <p>
+   <img alt="Onglet carte" src="media/edition_travail_qgis.png"/>
+  </p>
+  <p>
+   Quand on ouvre la
+   <strong>
+    table attributaire des éoliennes
+   </strong>
+   on peut maintenant consulter les travaux fils.
+  </p>
+  <h3 id="publier-la-table-attributaire-dans-lizmap">
+   Publier la table attributaire dans Lizmap
+  </h3>
+  <ul>
+   <li>
+    Publier les éoliennes et les travaux en
+    <strong>
+     WFS
+    </strong>
+    -&gt;
+    <strong>
+     Propriétés du projet
+    </strong>
+    QGIS
+   </li>
+   <li>
+    Dans le
+    <strong>
+     plugin Lizmap
+    </strong>
+    , onglet
+    <strong>
+     Outils
+    </strong>
+    , ajouter les couches
+    <strong>
+     eolienne
+    </strong>
+    et
+    <strong>
+     travaux
+    </strong>
+    dans la table attributaire, en précisant
+    <strong>
+     id
+    </strong>
+    pour l’identifiant unique.
+   </li>
+   <li>
+    Dans le tableau des couches d’
+    <strong>
+     édition
+    </strong>
+    , ajouter aussi la couche
+    <strong>
+     travaux
+    </strong>
+   </li>
+  </ul>
+  <p>
+   Enregistrer la configuration Lizmap, et tester:
+  </p>
+  <ul>
+   <li>
+    Outil d’édition : on peut ajouter un travail et préciser l’éolienne via la liste déroulante.
+   </li>
+  </ul>
+  <p>
+   <img alt="Edition d'un travail" src="media/edition_travail.png"/>
+  </p>
+  <ul>
+   <li>
+    Dans la table attributaire, si on affiche les éoliennes, on a un tableau des travaux fils en dessous
+   </li>
+  </ul>
+  <p>
+   <img alt="Table attributaire avec relation" src="media/table_attributaire_relation.png"/>
+  </p>
+  <h2 id="limpression-dans-lizmap">
+   L’impression dans Lizmap
+  </h2>
+  <p>
+   Pour pouvoir proposer une impression de la carte dans Lizmap, il suffit de créer un ou plusieurs composition QGIS
+  </p>
+  <ul>
+   <li>
+    Ouvrir le menu
+    <strong>
+     Projet &gt; Nouveau composeur d’impression
+    </strong>
+    . Donner un nom.
+   </li>
+   <li>
+    <strong>
+     Ajouter une carte, un titre et une légende
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Sauvegarder le projet QGIS
+    </strong>
+    et fermer le composeur
+   </li>
+   <li>
+    Ouvrir le plugin Lizmap,
+    <strong>
+     Onglet Carte
+    </strong>
+   </li>
+   <li>
+    Vérifier que la case
+    <strong>
+     Impression simple
+    </strong>
+    est cochée
+   </li>
+   <li>
+    Publier, rafraîchir et tester l’impression
+   </li>
+  </ul>
+  <h2 id="ajouter-une-carte-miniature">
+   Ajouter une carte miniature
+  </h2>
+  <ul>
+   <li>
+    On souhaite présenter une
+    <strong>
+     carte miniature
+    </strong>
+    qui montre dans quelle zone l’utilisateur se trouve lorsqu’il navigue sur la carte
+   </li>
+   <li>
+    Ajouter un groupe
+    <strong>
+     Overview
+    </strong>
+    (bien écrire avec une majuscule) à la racine de la légende de QGIS
+   </li>
+   <li>
+    <strong>
+     Y ajouter une couche
+    </strong>
+    , par exemple la couche
+    <strong>
+     Quartiers
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Enregistrer le projet QGIS et publier, puis tester
+    </strong>
+   </li>
+  </ul>
+  <h2 id="masquer-des-couches-sur-le-projet-web">
+   Masquer des couches sur le projet Web
+  </h2>
+  <p>
+   Certains couches doivent rester présentes dans le projet, mais on ne souhaite pas que l’utilisateur les voit une fois publiées
+  </p>
+  <ul>
+   <li>
+    Ajouter un groupe
+    <strong>
+     hidden
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Y déplacer les couches qu’on souhaite masquer
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Publier et tester
+    </strong>
+   </li>
+  </ul>
+  <h2 id="regrouper-des-couches">
+   Regrouper des couches
+  </h2>
+  <ul>
+   <li>
+    Dans le plugin Lizmap ,
+    <strong>
+     onglet Couches
+    </strong>
+   </li>
+   <li>
+    Choisir un groupe, par exemple le groupe
+    <strong>
+     Transport
+    </strong>
+    et le sélectionner.
+   </li>
+   <li>
+    Cocher l’option
+    <strong>
+     Groupe comme une couche
+    </strong>
+   </li>
+   <li>
+    Enregistrer la configuration,
+    <strong>
+     publier via le FTP
+    </strong>
+    –&gt; Tester le résultat sur la carte Web.
+   </li>
+  </ul>
+  <p>
+   On peut aussi utiliser l’option
+   <strong>
+    Fond de carte
+   </strong>
+   pour un groupe. Les couches sont alors regroupées, et ce groupe apparaît dans la liste déroulante des fonds.
+  </p>
+  <h2 id="autres-fonctions-avancees">
+   Autres fonctions avancées
+  </h2>
+  <ul>
+   <li>
+    <strong>
+     La protection des répertoires de cartes
+    </strong>
+    par utilisateur et groupes
+   </li>
+   <li>
+    <strong>
+     Les popups au format HTML
+    </strong>
+    : ajouter du contenu riche pour décrire les objets dans Lizmap
+   </li>
+   <li>
+    La création automatique du
+    <strong>
+     cache de tuiles côté serveur
+    </strong>
+   </li>
+  </ul>
+  <h2 id="les-ressources">
+   Les ressources
+  </h2>
+  <p>
+   <strong>
+    Documentation
+   </strong>
+   :
+   <a href="http://docs.3liz.com/fr/">
+    http://docs.3liz.com/fr/
+   </a>
+  </p>
+  <p>
+   <strong>
+    Code source
+   </strong>
+  </p>
+  <ul>
+   <li>
+    Lizmap Web Client :
+    <a href="https://github.com/3liz/lizmap-web-client">
+     https://github.com/3liz/lizmap-web-client
+    </a>
+   </li>
+   <li>
+    Lizmap Plugin :
+    <a href="https://github.com/3liz/lizmap-plugin">
+     https://github.com/3liz/lizmap-plugin
+    </a>
+   </li>
+  </ul>
+  <p>
+   <strong>
+    Site internet
+   </strong>
+   :
+   <a href="http://3liz.com">
+    http://3liz.com
+   </a>
+  </p>
+  <h2 id="roadmap">
+   Roadmap
+  </h2>
+  <ul>
+   <li>
+    Lancement de traitements complexes côté serveur et affichage des résultats (WPS et module Traitement)
+   </li>
+   <li>
+    Intégration d’OpenLayers 3
+   </li>
+   <li>
+    Lizmap Mobile en mode déconnecté
+   </li>
+   <li>
+    etc.
+   </li>
+  </ul>
+  <h2 id="les-services-de-3liz-autour-de-lizmap">
+   Les services de 3liz autour de Lizmap
+  </h2>
+  <ul>
+   <li>
+    <strong>
+     Formation
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Hébergement complet
+    </strong>
+    : Lizmap Hosting
+   </li>
+   <li>
+    <strong>
+     Développement de fonctionnalités
+    </strong>
+    génériques ou métiers
+   </li>
+   <li>
+    <strong>
+     Conseils
+    </strong>
+    , optimisation d’une instance
+   </li>
+   <li>
+    Ajout de fonctionnalités pour
+    <strong>
+     QGIS Server
+    </strong>
+   </li>
+   <li>
+    <strong>
+     Installation
+    </strong>
+    sur serveur Linux
+   </li>
+  </ul>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>
